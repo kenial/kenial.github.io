@@ -2,7 +2,7 @@
 
 module.exports = {
   url: 'https://blog.kenial.net',
-  pathPrefix: '/docs',
+  pathPrefix: '/',
   title: 'blog.kenial.net',
   subtitle: 'GhostOnNetwork',
   copyright: '',

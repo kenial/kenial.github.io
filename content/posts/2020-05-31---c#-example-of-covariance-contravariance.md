@@ -33,12 +33,12 @@ description: "공변성(Covariance)과 반공변성(Contravariance)은 클래스
         public void DoCat() { }
     }
 
-위 클래스를 가지고 어떤 타입 변환이 가능할까? Mammal 타입 변수에 Cat 객체를 할당하는 경우를 상상해 볼 수 있다. Cat 객체는 Mammal 객체가 가진 동일한 메서드와 속성을 갖추고 있기 때문이다.
+위 클래스를 가지고 어떤 타입 변환이 가능할까? Mammal 타입 변수에 Cat 객체를 할당하는 경우를 생각해 볼 수 있다. Cat 객체는 Mammal 객체가 가진 동일한 메서드와 속성을 갖추고 있기 때문이다.
 
 
     Mammal mammal = new Cat();
 
-위와 같이 서브타입 → 수퍼타입으로의 변환을 공변성(Covariance)라고 한다. 이러한 내용은 객체지향 프로그래밍을 배운 사람이라면 누구나 익숙할 것이다. 하지만 Generic을 사용할 경우 타입 인자가 어디에 있느냐에 따라 변환의 방향이 수퍼타입 → 서브타입이 되는 경우가 있다. 다음 예를 살펴보자.
+위와 같이 서브타입 → 수퍼타입으로의 변환을 공변성(Covariance)이라고 한다. 이러한 내용은 객체지향 프로그래밍을 배운 사람이라면 누구나 익숙할 것이다. 하지만 Generic을 사용할 경우 타입 인자가 어디에 있느냐에 따라 변환의 방향이 수퍼타입 → 서브타입이 되는 경우가 있다. 다음 예를 살펴보자.
 
 
     class Reptile : Animal { }
@@ -73,4 +73,4 @@ description: "공변성(Covariance)과 반공변성(Contravariance)은 클래스
 
 13행 구문은 위 예와 반대 경우다. Action<Animal> 타입 → Action<Mammal> 타입으로의 변환은, Action<Mammal> 타입이 Animal 타입의 인자를 받는 함수를 처리할 수 있다. 하지만 14행 구문에서, actionFromAnimal은 Mammal 타입을 인자로 받기 때문에 Snake 타입 변수를 인자로 받을 수 없고, (Snake는 DoAnimal()을 호출할 수 있음에도 불구하고) 에러가 발생한다.
 
-13행의 경우와 같이, Action<Animal> 타입 → Action<Mammal> 타입처럼 수퍼타입 → 서브타입의 변환이 일어나는 경우 이를 반공변성(Contravariance)라고 한다.
+13행의 경우와 같이, Action<Animal> 타입 → Action<Mammal> 타입처럼 수퍼타입 → 서브타입의 변환이 일어나는 경우 이를 반공변성(Contravariance)이라고 한다.

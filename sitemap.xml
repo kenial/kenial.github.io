@@ -2,18 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://blog.kenial.net/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://blog.kenial.net/posts/new-start/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://blog.kenial.net/posts/whisper-tts-utility/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://blog.kenial.net/posts/wedding-invitation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/posts/21-days-ko/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://blog.kenial.net/posts/whisper-tts-utility/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/posts/retro-on-sh-translation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/posts/retro-on-programmers-interview/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://blog.kenial.net/posts/new-start/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://blog.kenial.net/posts/wedding-invitation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://blog.kenial.net/posts/how-smart-machines-think/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/posts/rage-against-the-company/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/posts/attach-to-iis-process/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://blog.kenial.net/posts/how-smart-machines-think/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/posts/migrate-gitgub-repo-for-blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/posts/csharp-example-of-covariance-contravariance/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://blog.kenial.net/posts/csharp-features-by-version/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/tag/c</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/tag/contravariance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://blog.kenial.net/tag/covariance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

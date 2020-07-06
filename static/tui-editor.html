@@ -1,9 +1,11 @@
 <html>
 <head>
+    <title>TOAST UI editor sample</title>
     <!-- Editor's Dependecy Style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css" />
     <!-- Editor's Style -->
-    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <!--<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />-->
+    <link rel="stylesheet" href="https://nhn.github.io/tui.editor/latest/dist/cdn/toastui-editor.css" />    
 </head>
 <body>
     <!--<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>-->
@@ -12,6 +14,8 @@
         <div id="editor"></div>    
     </div>
     <script>
+        const autoSaveVarName = 'autosave';
+        const autoSaveInterval = 60 * 1000; // 1 minute
         const initValue = "```js\n\
 console.log('foo')\n\
 ```\n\
@@ -30,18 +34,53 @@ console.log('bar')\n\
 \n\
 Powered by [tui - editor](https://github.com/nhn/tui.editor)";
         window.onload = function() {
-            const Editor = toastui.Editor;
+            if (isStorageSupported())
+            {
+                var myStorage = window.localStorage;
+                var autosave = myStorage.getItem(autoSaveVarName);
+                if (autosave === null)
+                {
+                    autosave = initValue;
+                }
+            }
+
             const options = {
                 el: document.querySelector('#editor'),
                 height: '100%',
                 initialEditType: 'markdown',
                 previewStyle: 'vertical',
                 usageStatistics: false,
-                initialValue: initValue
+                initialValue: autosave
             };
-            const editor = new Editor(options);
+            const editor = new toastui.Editor(options);
             editor.getHtml();
+
+            window.setInterval(doAutosave, autoSaveInterval);
         };
+
+        window.onbeforeunload = function(e) {
+            doAutosave();
+        }
+
+        function doAutosave() {
+            if (isStorageSupported())
+            {
+                var myStorage = window.localStorage;
+                var markdown = toastui.Editor.getInstances()[0].getMarkdown();
+                myStorage.setItem(autoSaveVarName, markdown);
+            }
+        }
+
+        function isStorageSupported() {
+            var testvar = 'a';
+            try {
+                localStorage.setItem(testvar, testvar);
+                localStorage.removeItem(testvar);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
     </script>
 </body>
 </html>

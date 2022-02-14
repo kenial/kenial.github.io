@@ -60,6 +60,9 @@ typings/
 # next.js build output
 .next
 
+# package-lock
+package-lock.json
+
 flow-typed/
 .cache/
 .gatsby-context.js
